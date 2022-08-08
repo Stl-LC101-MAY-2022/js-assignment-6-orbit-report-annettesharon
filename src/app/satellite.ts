@@ -15,7 +15,8 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
+		// return true;
+		return this.type.toUpperCase() === "SPACE DEBRIS";
    }
 
 }
