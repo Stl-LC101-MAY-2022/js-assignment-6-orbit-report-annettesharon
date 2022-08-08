@@ -9,6 +9,7 @@ import { Satellite } from '../satellite';
 export class OrbitCountsComponent implements OnInit {
 
 	@Input() satellites: Satellite[];
+	types: string[] = ['Total', 'Space Debris', 'Communication', 'Probe', 'Positioning', 'Space Station', 'Telescope'];
 
   constructor() { }
 
@@ -16,6 +17,9 @@ export class OrbitCountsComponent implements OnInit {
   }
 
   countByType(type: string): number {
+	if (type === 'Total') {
+		return this.satellites.length;
+	  } else {
 	let count = 0;
 	if (this.satellites) {
 	  for (let i = 0; i < this.satellites.length; i++) {
@@ -26,6 +30,6 @@ export class OrbitCountsComponent implements OnInit {
 	}
 	return count;
  }
-
+  }
 
 }
