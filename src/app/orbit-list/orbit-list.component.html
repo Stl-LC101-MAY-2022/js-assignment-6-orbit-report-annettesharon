@@ -16,7 +16,7 @@
     <tr *ngFor="let list of satellites; let i = index" [class.stripe]="i % 2 === 0">
         <td>{{list.name}}</td>
         <td [class.warning] = "list.isSpaceDebris()">{{list.type}}</td>
-        <td>{{list.type}}</td>
+        <!-- <td>{{list.type}}</td> -->
         <td>{{list.operational}}</td>
         <td>{{list.orbitType}}</td>
         <td>{{list.launchDate}}</td>
