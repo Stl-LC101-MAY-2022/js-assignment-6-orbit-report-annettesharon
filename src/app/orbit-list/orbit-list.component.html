@@ -13,7 +13,7 @@
         <td>HIGH</td>
         <td>2001-11-01</td>
     </tr> -->
-    <tr *ngFor="let list of satellites; let i = index" [class.stripe]="i % 2 === 0">
+    <tr class="data-row" *ngFor="let list of satellites; let i = index" [class.stripe]="i % 2 === 0">
         <td>{{list.name}}</td>
         <td [class.warning] = "list.isSpaceDebris()">{{list.type}}</td>
         <!-- <td>{{list.type}}</td> -->
